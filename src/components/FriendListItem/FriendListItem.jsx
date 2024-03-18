@@ -1,11 +1,11 @@
-import style from "./FriendListItem.module.css"
+import css from "./FriendListItem.module.css"
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <div>
-      <img src={avatar} alt="Avatar" width="48" />
-      <p>{name}</p>
-      <p className={isOnline ? style.online : style.offline}>{isOnline ? "Online" : "Offline"}</p>
+    <div className={css.card}>
+      <img className={css.avatar} src={avatar} alt="Avatar" width="48" />
+      <p className={css.name}>{name}</p>
+      <p className={isOnline ? css.online : css.offline}>{isOnline ? "Online" : "Offline"}</p>
     </div>
   );
 }
